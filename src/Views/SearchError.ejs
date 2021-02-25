@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <header class="heading">
+      <h1 class="heading_logo">Get Weather Info</h1>
+      <div class="heading_search">
+        <%- include('./Partial/searchBar.ejs') %>
+      </div>
+    </header>
+    <section class="card-section">
+      <h3 class="error">No Such City Found Kindly Re-enter the City Name</h3>
+      <div class="card-footer">
+        <p>OpenWeather Api!!</p>
+      </div>
+    </section>
+  </body>
+</html>

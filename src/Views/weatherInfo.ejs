@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <header class="heading">
+      <h1 class="heading_logo">Get Weather Info</h1>
+      <div class="heading_search">
+        <%- include('./Partial/searchBar.ejs') %>
+      </div>
+    </header>
+    <section class="card-section">
+      <div class="card">
+        <h2><%- dataInfo.name %></h2>
+        <img
+          src="http://openweathermap.org/img/wn/<%- dataInfo.weather[0].icon %>.png "
+        />
+        <h1 style="font-weight: 400; color: red; font-size: xx-large">
+          <center><%- dataInfo.weather[0].description %></center>
+        </h1>
+        <div class="card-content">
+          <h3 class="card-subtitle">
+            Latitude
+            <span class="card-InfoSpan"> <%- dataInfo.coord.lat %> </span>
+          </h3>
+
+          <h3 class="card-subtitle">
+            Longitude
+            <span class="card-InfoSpan"> <%- dataInfo.coord.lon %> </span>
+          </h3>
+
+          <h3 class="card-subtitle">
+            Wind Speed:
+            <span class="card-InfoSpan"> <%- dataInfo.wind.speed %> </span>
+          </h3>
+
+          <h3 class="card-subtitle">
+            Wind Degree:
+            <span class="card-InfoSpan"> <%- dataInfo.wind.deg %> </span>
+          </h3>
+
+          <h3 class="card-subtitle">
+            Temperature Information
+            <span class="card-InfoSpan"> <%- dataInfo.main.temp %> </span>
+          </h3>
+
+          <h3 class="card-subtitle">
+            Maximum Temperature
+            <span class="card-InfoSpan"> <%- dataInfo.main.temp_max %> </span>
+          </h3>
+
+          <h3 class="card-subtitle">
+            Minimum Temperature
+            <span class="card-InfoSpan"> <%- dataInfo.main.temp_min %> </span>
+          </h3>
+        </div>
+
+        <div class="card-footer">
+          <p>OpenWeather Api!!</p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+<!-- 
+{
+: {
+": 1.54,
+ 250
+  },
+  "clouds": {
+  "all": 0
+  },
+  "dt": 1614260047,
+  "sys": {
+  "type": 1,
+  "id": 9161,
+  "country": "IN",
+  "sunrise": 1614216037,
+  "sunset": 1614257289
+  },
+  "main": {
+    "temp": 282.55,
+    "feels_like": 281.86,
+    "temp_min": 280.37,
+    "temp_max": 284.26,
+    "pressure": 1023,
+    "humidity": 100
+  },
+  "timezone": 19800,
+  "id": 1273294,
+  "name": "Delhi",
+  "cod": 200
+  } -->
